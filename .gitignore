@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+thumbs.db
+
+# Project specific
+*.png
+*.webp
+brain/
+implementation_plan.md
+task.md
+walkthrough.md
