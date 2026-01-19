@@ -1,4 +1,4 @@
-# AI-Based Network Intrusion Detection System (AstraGuard-AI)
+# AI-Based Network Intrusion Detection System 
 
 ## 🛡️ Project Overview
 This project is an end-to-end **Artificial Intelligence-based Network Intrusion Detection System (NIDS)** designed to secure modern digital infrastructures. It leverages Machine Learning (Random Forest) to classify network traffic as legitimate or malicious in real-time, providing a proactive defense against evolving cyber threats.
@@ -118,3 +118,8 @@ The project includes a modular presentation structure:
 
 ### Final Submission Notes
 This project is structured according to the **standard final-year cybersecurity project guidelines**. It is plagiarism-free, documented professionally, and ready for deployment.
+![AI-Based-NIDS-2](https://github.com/user-attachments/assets/53c96955-24e8-4964-9d82-e03bce157adb)
+![AI-Based-NIDS](https://github.com/user-attachments/assets/fdb77d1a-1c29-45db-8cc1-b81be884f09f)
+![AI-Based-NIDS2](https://github.com/user-attachments/assets/260a3fb9-cde8-4014-b1c5-95f9ffe8f931)
+
+
