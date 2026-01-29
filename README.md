@@ -2,6 +2,7 @@
 
 <div align="center">
 
+![Apertre 3.0](https://img.shields.io/badge/Apertre-3.0-blueviolet?style=for-the-badge&logo=github)
 ![Security Banner](https://img.shields.io/badge/Security-AI%20Powered-blue?style=for-the-badge&logo=security&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python&logoColor=white)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-orange?style=for-the-badge&logo=scikit-learn&logoColor=white)
@@ -12,6 +13,13 @@
 **Protecting Digital Infrastructure with Real-Time AI-Powered Network Security**
 
 [Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation--setup) • [Demo](#-results--demonstration) • [Documentation](#-documentation)
+
+---
+</div>
+
+## 🚀 Part of Apertre 3.0 Open-Source Contribution Journey
+
+> "Apertre is a 30-day open-source contribution journey where participants work on actual GitHub projects, get guidance from mentors, and build open-source skills by submitting pull requests — essentially real contributions to real codebases. It’s designed to be beginner-friendly while also offering depth for more experienced contributors"
 
 ---
 
