@@ -1,6 +1,7 @@
-# 🛡️ AI-Based Network Intrusion Detection System (NIDS)
+# **🛡️ AI-Based Network Intrusion Detection System**
 
 <div align="center">
+
 
 ![Apertre 3.0](https://img.shields.io/badge/Apertre-3.0-blueviolet?style=for-the-badge&logo=github)
 ![Security Banner](https://img.shields.io/badge/Security-AI%20Powered-blue?style=for-the-badge&logo=security&logoColor=white)
@@ -10,14 +11,7 @@
 
 ### *Intelligent Threat Detection Through Machine Learning*
 
-[Features](#-key-features) • [Architecture](#-system-architecture) • [Usage](#-usage-guide) • [Demo](#-results--demonstration)
-
----
-</div>
-
-## 🚀 Part of Apertre 3.0 Open-Source Contribution Journey
-
-> "Apertre is a 30-day open-source contribution journey where participants work on actual GitHub projects, get guidance from mentors, and build open-source skills by submitting pull requests — essentially real contributions to real codebases. It’s designed to be beginner-friendly while also offering depth for more experienced contributors"
+[Features](#-key-features) • [Quick Start](#-quick-start) • [Demo](#-live-demo) • [Contribute](#-contributing)
 
 ---
 
@@ -40,258 +34,29 @@
   </tr>
 </table>
 
+</div>
+
 ---
+
+## 🌟 What is This?
+
+<div align="center">
+
+An **AI-powered cybersecurity system** that monitors network traffic in real-time to detect malicious activities like DDoS, malware, and brute force attacks using machine learning.
+
+### Why AI Over Traditional Firewalls?
+
+| Traditional 🚫 | AI-Powered ✅ |
+|---------------|---------------|
+| Detects only known threats | Identifies novel attack patterns |
+| Static rule-based | Adaptive learning |
+| High false negatives | Anomaly detection |
+| Manual updates | Automated recognition |
 
 </div>
 
-## 📋 Table of Contents
-
-- [Introduction](#-introduction)
-- [Problem Statement](#-problem-statement)
-- [System Architecture](#-system-architecture)
-- [Key Features](#-key-features)
-- [Technology Stack](#-technology-stack)
-- [Working Flow](#-working-flow)
-- [Installation & Setup](#-installation--setup)
-- [Usage Guide](#-usage-guide)
-- [Results & Demonstration](#-results--demonstration)
-- [Screenshots](#-screenshots)
-- [Performance Metrics](#-performance-metrics)
-- [Future Scope](#-future-scope)
-- [Contributing](#-contributing)
-- [Author](#-author)
-- [License](#-license)
-
 ---
 
-## 🌐 Introduction
-
-### What is a Network Intrusion Detection System?
-
-A **Network Intrusion Detection System (NIDS)** is a cybersecurity solution that monitors network traffic in real-time to identify malicious activities, policy violations, and unauthorized access attempts. It acts as a vigilant sentinel, constantly analyzing data packets flowing through your network infrastructure.
-
-### Why AI > Traditional Rule-Based Firewalls?
-
-Traditional signature-based firewalls operate on predefined rules and known threat signatures. However, modern cyber threats are evolving rapidly:
-
-| Traditional Firewalls | AI-Based NIDS |
-|----------------------|---------------|
-| ❌ Detects only known threats | ✅ Identifies novel attack patterns |
-| ❌ Static rule-based detection | ✅ Adaptive learning from data |
-| ❌ High false-negative rates | ✅ Anomaly detection capabilities |
-| ❌ Manual signature updates | ✅ Automated pattern recognition |
-| ❌ Vulnerable to zero-day attacks | ✅ Behavioral analysis protection |
-
-### Real-World Impact on Cybersecurity
-
-**Our AI-based NIDS provides:**
-
-🔒 **Proactive Defense** - Detects threats before they cause damage  
-⚡ **Real-Time Analysis** - Sub-10ms inference latency  
-🎯 **High Accuracy** - 98%+ detection rate on simulated traffic  
-💰 **Cost-Effective** - Accessible solution for SMEs  
-📊 **Actionable Insights** - Visual analytics for security teams
-
-### System Workflow
-
-```
-Network Traffic → Packet Capture → Feature Extraction → AI Classification → Threat Alert
-```
-
-The system continuously analyzes network packets, extracts critical features (duration, byte counts, connection patterns), feeds them to a trained Random Forest model, and triggers alerts when malicious activity is detected.
-
----
-
-## 🚨 Problem Statement
-
-### The Growing Threat Landscape
-
-The cybersecurity industry faces unprecedented challenges:
-
-#### 📈 Exponential Growth of Cyber Attacks
-
-- **350%** increase in ransomware attacks (2023)
-- **$10.5 trillion** projected annual cybercrime cost by 2025
-- **Zero-day vulnerabilities** discovered daily
-- **Advanced Persistent Threats (APTs)** targeting critical infrastructure
-
-#### 🔴 Critical Attack Vectors
-
-```mermaid
-graph LR
-    A[Cyber Threats] --> B[DDoS Attacks]
-    A --> C[Malware/Ransomware]
-    A --> D[Brute Force]
-    A --> E[Zero-Day Exploits]
-    A --> F[Insider Threats]
-    
-    B --> G[Service Disruption]
-    C --> H[Data Breach]
-    D --> I[Unauthorized Access]
-    E --> J[System Compromise]
-    F --> K[Data Exfiltration]
-    
-    style A fill:#ff6b6b
-    style B fill:#ffd93d
-    style C fill:#ffd93d
-    style D fill:#ffd93d
-    style E fill:#ffd93d
-    style F fill:#ffd93d
-```
-
-### Limitations of Signature-Based Detection
-
-**Traditional IDS systems fail against:**
-
-1. **🆕 Zero-Day Attacks** - Unknown vulnerabilities with no existing signatures
-2. **🔄 Polymorphic Malware** - Self-modifying code that evades pattern matching
-3. **🎭 Evasion Techniques** - Encrypted payloads and obfuscated traffic
-4. **⚡ High-Speed Networks** - Unable to process modern traffic volumes
-5. **🧩 Complex Attack Chains** - Multi-stage attacks that appear benign individually
-
-### The Need for Automated Learning Systems
-
-**Machine Learning addresses these gaps by:**
-
-- Learning normal traffic behavior patterns
-- Detecting statistical anomalies in real-time
-- Adapting to new attack methodologies
-- Reducing dependency on signature databases
-- Providing predictive threat intelligence
-
-### Real-Time Detection Challenges
-
-| Challenge | Impact | Our Solution |
-|-----------|--------|--------------|
-| High-dimensional data | Processing bottlenecks | Feature engineering & selection |
-| Class imbalance | Poor minority class detection | Balanced training datasets |
-| Concept drift | Model degradation | Continuous retraining capability |
-| False positives | Alert fatigue | High-precision RF algorithm |
-| Scalability | Infrastructure costs | Efficient Python implementation |
-
-### Target Organizations
-
-This solution is specifically designed for:
-
-- 🏢 **Small & Medium Enterprises** - Affordable security
-- 🎓 **Educational Institutions** - Resource-constrained networks
-- 🏥 **Healthcare Facilities** - Critical infrastructure protection
-- 💼 **Startups** - Early-stage security implementation
-
----
-
-## 🏗️ System Architecture
-
-### High-Level Architecture Diagram
-
-```mermaid
-graph TB
-    %% Definitions
-    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
-    classDef process fill:#fff3e0,stroke:#e65100,stroke-width:2px;
-    classDef ai fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
-    classDef ui fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-    classDef db fill:#fce4ec,stroke:#880e4f,stroke-width:2px;
-
-    subgraph Input["🌐 Data Input Layer"]
-        A[Network Traffic]:::input
-        B[Simulation Engine]:::input
-    end
-    
-    subgraph Processing["⚙️ Processing Layer"]
-        C[Packet Capture]:::process
-        D[Data Preprocessing]:::process
-        E[Feature Extraction]:::process
-    end
-    
-    subgraph Intelligence["🧠 Intelligence Layer"]
-        F[Random Forest Model]:::ai
-        G[Training Pipeline]:::ai
-        H[Real-time Prediction]:::ai
-    end
-    
-    subgraph Presentation["📊 Presentation Layer"]
-        I[Streamlit Dashboard]:::ui
-        J[Visualization Engine]:::ui
-        K[Alert System]:::ui
-    end
-    
-    subgraph Storage["💾 Data Layer"]
-        L[(Training Data)]:::db
-        M[(Model Artifacts)]:::db
-        N[(Logs Database)]:::db
-    end
-    
-    %% Flows
-    A & B --> C
-    C --> D --> E
-    E --> F & G
-    G --> M
-    M --> H
-    F --> H
-    H --> I
-    I --> J & K
-    L --> G
-    H & K --> N
-    
-    %% Links Styling
-    linkStyle default stroke-width:2px,fill:none,stroke:#555;
-```
-
-### Component Breakdown
-
-*   **🔵 Data Input**: Traps network packets or generates high-fidelity simulations.
-*   **🟡 Processing**: Cleans data and extracts 41 key features (e.g., duration, byte correlation).
-*   **🟣 Intelligence**: A **Random Forest Classifier** (100 trees) predicts traffic nature in <10ms.
-*   **🟢 Presentation**: **Streamlit** dashboard provides real-time visualization and alerts.
-
-
----
-
-### Detailed Architecture Flow
-
-### System Workflow
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant Net as Network
-    participant Feat as Feature Engine
-    participant ML as 🧠 AI Model
-    participant Dash as 🛡️ Dashboard
-    participant Alert as 🚨 Alert System
-    
-    Note over Net, Feat: Data Ingestion
-    Net->>Feat: Raw Packets
-    Feat->>Feat: Extract 41 Features
-    Feat->>ML: Feature Vector
-    
-    Note over ML, Alert: Intelligence
-    ML->>ML: Random Forest Inference
-    
-    alt Benign Traffic
-        ML-->>Dash: Status: OK ✅
-    else Malicious Traffic
-        ML-->>Alert: Status: THREAT ❌
-        Alert->>Dash: Trigger Red Alert!
-        Alert->>Alert: Log Incident
-    end
-    
-    Dash->>Net: Live Status Update
-```
-
----
-
-## ✨ Key Features
-
-*   **Real-Time Simulation**: High-fidelity packet generation for DDoS, Brute Force, and Malware.
-*   **High Accuracy**: **98%+** detection rate using Random Forest on CIC-IDS2017 dataset.
-*   **Interactive Dashboard**: Live metrics, attack logs, and confidence scoring via **Streamlit**.
-*   **Modular Design**: extensible Python architecture with standard ML libraries.
-*   **Alert System**: Instant visual notifications for detected threats.
-
-
----
 
 ## 💻 Technology Stack
 
@@ -311,55 +76,93 @@ sequenceDiagram
 
 </div>
 
-### Technology Deep Dive
+---
 
-#### 🐍 Python 3.8+
-**Role**: Foundation of the entire system  
-**Key Libraries Used**:
-- `pickle` - Model serialization
-- `datetime` - Timestamp handling
-- `random` - Simulation randomness
-- `io` - File operations
+## 🏗️ System Architecture
 
-#### 📊 Pandas & NumPy
-**Role**: Data manipulation and numerical operations  
-**Capabilities**:
-- Loading CIC-IDS2017 CSV datasets
-- Feature scaling and normalization
-- Missing value imputation
-- Statistical computations
+```mermaid
+graph TB
+    %% Vibrant color definitions
+    classDef input fill:#FF6B9D,stroke:#FF1493,stroke-width:4px,color:#FFF
+    classDef process fill:#FFD93D,stroke:#FFA500,stroke-width:4px,color:#FFF
+    classDef ai fill:#00D9FF,stroke:#0080FF,stroke-width:4px,color:#FFF
+    classDef ui fill:#00F5A0,stroke:#00C853,stroke-width:4px,color:#FFF
+    classDef alert fill:#C77DFF,stroke:#9D4EDD,stroke-width:4px,color:#FFF
 
-#### 🤖 Scikit-Learn
-**Role**: Machine learning framework  
-**Components Used**:
-- `RandomForestClassifier` - Core ML model
-- `train_test_split` - Data partitioning
-- `accuracy_score`, `classification_report` - Metrics
-- `StandardScaler` - Feature normalization
+    A[🌐 Network Traffic]:::input
+    B[📦 Packet Capture]:::process
+    C[🔍 Feature Extraction<br/>41 Features]:::process
+    D[🧠 Random Forest<br/>100 Trees]:::ai
+    E{🎯 Classification}:::alert
+    F[✅ Benign Traffic]:::ui
+    G[🚨 THREAT DETECTED]:::alert
+    H[📊 Dashboard Update]:::ui
+    I[📝 Alert Log]:::alert
 
-**Why Random Forest?**
-- ✅ Handles high-dimensional data (41 features)
-- ✅ Resistant to overfitting
-- ✅ Feature importance ranking
-- ✅ No need for feature scaling (tree-based)
-- ✅ Excellent accuracy-speed tradeoff
+    A --> B --> C --> D --> E
+    E -->|Normal| F --> H
+    E -->|Malicious| G --> I --> H
+    
+    style E fill:#FFD93D,stroke:#FFA500,stroke-width:5px,color:#FFF
+```
 
-#### 🌟 Streamlit
-**Role**: Interactive web interface  
-**Features Leveraged**:
-- Multi-page app architecture
-- File uploader widget
-- Real-time data tables
-- Caching for performance
-- Custom CSS styling
+### 🔄 Real-Time Detection Flow
 
-#### 📈 Matplotlib & Seaborn
-**Role**: Data visualization  
-**Visualizations Created**:
-- Attack distribution pie charts
-- Traffic type bar graphs
-- Confidence score histograms
-- Timeline plots
+```mermaid
+flowchart LR
+    A[⚡ Live Traffic]:::input
+    B[⚙️ Preprocess]:::process
+    C[🤖 AI Model]:::ai
+    D{Threat?}:::decision
+    E[✅ Allow]:::safe
+    F[🚫 Block]:::danger
+    
+    A --> B --> C --> D
+    D -->|Safe| E
+    D -->|Attack| F
+    
+    classDef input fill:#FF6B9D,stroke:#FF1493,stroke-width:4px,color:#FFF
+    classDef process fill:#FFD93D,stroke:#FFA500,stroke-width:4px,color:#FFF
+    classDef ai fill:#00D9FF,stroke:#0080FF,stroke-width:4px,color:#FFF
+    classDef decision fill:#C77DFF,stroke:#9D4EDD,stroke-width:4px,color:#FFF
+    classDef safe fill:#00F5A0,stroke:#00C853,stroke-width:4px,color:#FFF
+    classDef danger fill:#FF5757,stroke:#FF0000,stroke-width:4px,color:#FFF
+```
+
+---
+
+## ⚡ Quick Start
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/sr-857/AI-Network-Intrusion-Detection.git
+cd AI-Network-Intrusion-Detection
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch dashboard
+streamlit run nids_main.py
+```
+
+### Usage Flow
+
+```mermaid
+graph LR
+    A[🚀 Start]:::start
+    B[📁 Upload Dataset]:::action
+    C[🎓 Train Model]:::action
+    D[🔄 Simulate Traffic]:::action
+    E[📊 View Results]:::result
+    
+    A --> B --> C --> D --> E
+    
+    classDef start fill:#FF6B9D,stroke:#FF1493,stroke-width:4px,color:#FFF
+    classDef action fill:#00D9FF,stroke:#0080FF,stroke-width:4px,color:#FFF
+    classDef result fill:#00F5A0,stroke:#00C853,stroke-width:4px,color:#FFF
+```
 
 ---
 
@@ -409,411 +212,176 @@ graph TD
     ShowMetrics --> Mode
     TrainFirst --> Mode
     
-    style Start fill:#4CAF50,color:#fff
-    style End fill:#f44336,color:#fff
-    style Train fill:#9C27B0,color:#fff
-    style Predict fill:#2196F3,color:#fff
-    style Alert fill:#FF5722,color:#fff
-    style Visualize fill:#00BCD4,color:#fff
+    style Start fill:#00F5A0,stroke:#00C853,color:#fff,stroke-width:4px
+    style End fill:#FF5757,stroke:#FF0000,color:#fff,stroke-width:4px
+    style Train fill:#C77DFF,stroke:#9D4EDD,color:#fff,stroke-width:4px
+    style Predict fill:#00D9FF,stroke:#0080FF,color:#fff,stroke-width:4px
+    style Alert fill:#FF6B9D,stroke:#FF1493,color:#fff,stroke-width:4px
+    style Visualize fill:#FFD93D,stroke:#FFA500,color:#fff,stroke-width:4px
+    style Mode fill:#00D9FF,stroke:#0080FF,color:#fff,stroke-width:3px
+    style Validate fill:#FFD93D,stroke:#FFA500,color:#fff,stroke-width:3px
+    style LoadModel fill:#C77DFF,stroke:#9D4EDD,color:#fff,stroke-width:3px
+    style Classify fill:#FF6B9D,stroke:#FF1493,color:#fff,stroke-width:3px
+    style Continue fill:#00F5A0,stroke:#00C853,color:#fff,stroke-width:3px
 ```
 
-### Step-by-Step Workflow
-
-#### Phase 1: Model Training
-
-1️⃣ **Data Upload**  
-   - User uploads CIC-IDS2017 format CSV
-   - System validates required columns
-
-2️⃣ **Preprocessing**  
-   ```python
-   - Remove duplicates
-   - Handle missing values
-   - Encode categorical variables (Attack → 1, Benign → 0)
-   - Normalize numerical features
-   ```
-
-3️⃣ **Feature Engineering**  
-   - Extract 41 network metrics
-   - Examples: `Duration`, `Src_Bytes`, `Dst_Bytes`, `Protocol`, `Flags`
-
-4️⃣ **Model Training**  
-   ```python
-   RandomForest(n_estimators=100, max_depth=20, random_state=42)
-   ```
-
-5️⃣ **Evaluation**  
-   - Accuracy, Precision, Recall, F1-Score
-   - Confusion Matrix
-   - ROC-AUC Curve
-
-6️⃣ **Model Persistence**  
-   - Serialize model to disk (`.pkl` file)
-
-#### Phase 2: Traffic Simulation
-
-1️⃣ **Parameter Configuration**  
-   - Number of packets
-   - Attack ratio (% malicious traffic)
-   - Attack types (DDoS, Brute Force, Malware)
-
-2️⃣ **Packet Generation**  
-   ```python
-   Simulated_Features = {
-       'Duration': random_duration(),
-       'Src_Bytes': random_bytes(),
-       'Dst_Bytes': random_bytes(),
-       'Protocol': random_protocol(),
-       ...
-   }
-   ```
-
-3️⃣ **Real-Time Prediction**  
-   - Load trained model
-   - Classify each packet
-   - Calculate confidence scores
-
-4️⃣ **Alert Triggering**  
-   - If prediction == "Attack"
-   - Log timestamp, type, confidence
-   - Update dashboard with red alert
-
-5️⃣ **Visualization Update**  
-   - Refresh pie charts
-   - Update traffic counters
-   - Display latest predictions
-
----
-
-## 🚀 Installation & Setup
-
-### Prerequisites
-
-- **Python**: Version 3.8 or higher
-- **pip**: Latest version
-- **Operating System**: Windows, macOS, or Linux
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/sr-857/AI-Network-Intrusion-Detection.git
-cd AI-Network-Intrusion-Detection
-```
-
-### Step 2: Create Virtual Environment (Recommended)
-
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### Step 3: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-**Or install manually:**
-
-```bash
-pip install pandas numpy scikit-learn streamlit matplotlib seaborn
-```
-
-### Step 4: Verify Installation
-
-```bash
-python --version  # Should be 3.8+
-pip list         # Verify all packages installed
-```
-
-### Step 5: Launch the Application
-
-```bash
-streamlit run nids_main.py
-```
-
-The dashboard will automatically open in your browser at `http://localhost:8501`
-
-### Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Port 8501 already in use | Run `streamlit run nids_main.py --server.port 8502` |
-| Module import errors | Reinstall dependencies: `pip install --upgrade -r requirements.txt` |
-| Streamlit command not found | Add Python Scripts to PATH or use `python -m streamlit run nids_main.py` |
-
----
-
-## 📖 Usage Guide
-
-### Tab 1: Model Training
-
-1. Click **"Upload Training Dataset"**
-2. Select a CSV file in CIC-IDS2017 format
-3. Wait for preprocessing (progress bar shown)
-4. View training metrics:
-   - Accuracy Score
-   - Classification Report
-   - Confusion Matrix
-5. Model auto-saved for future use
-
-**Required CSV Columns:**
-```
-Duration, Src_Bytes, Dst_Bytes, Protocol, Src_Port, Dst_Port, 
-Flags, Conn_Count, Srv_Count, ... (41 total features), Label
-```
-
-### Tab 2: Traffic Simulation
-
-1. Configure simulation parameters:
-   - **Number of Packets**: 100-10000
-   - **Attack Ratio**: 0%-50%
-   - **Attack Types**: Select from dropdown
-2. Click **"Start Simulation"**
-3. Watch real-time predictions appear
-4. View visualizations:
-   - Traffic distribution pie chart
-   - Attack type breakdown
-   - Confidence scores
-5. Review alert logs at the bottom
-
-### Tab 3: Project Information
-
-- Read about the system architecture
-- Understand ML model details
-- View technology stack
-- Access documentation
-
-### Dashboard Features
-
-#### 🎨 Visual Elements
-
-- **Green Cards**: Benign traffic detected
-- **Red Cards**: Malicious traffic detected
-- **Pie Chart**: Overall traffic distribution
-- **Bar Graph**: Attack type frequencies
-- **Alert Log**: Chronological incident list
-
-#### ⚙️ Settings
-
-Access via sidebar:
-- Toggle dark/light theme
-- Adjust simulation speed
-- Export logs as CSV
-- Reset model training
-
----
-
-## 📊 Results & Demonstration
-
-### What Users Will See
-
-#### Dashboard Overview
-
-Upon launching, the Streamlit dashboard presents three main tabs:
-
-```
-┌─────────────────────────────────────────────────┐
-│  🛡️ AI-Based Network Intrusion Detection System │
-├─────────────────────────────────────────────────┤
-│  [Train Model] [Simulate Traffic] [Project Info]│
-├─────────────────────────────────────────────────┤
-│                                                  │
-│  📊 Real-Time Traffic Monitor                    │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
-│  │ Benign:  │  │ Attacks: │  │ Accuracy:│      │
-│  │   847    │  │    153   │  │   98.2%  │      │
-│  └──────────┘  └──────────┘  └──────────┘      │
-│                                                  │
-│  [Traffic Distribution Chart]                   │
-│  [Recent Predictions Table]                     │
-│  [Alert History Log]                            │
-└─────────────────────────────────────────────────┘
-```
-
-### Attack Detection Process
-
-#### Scenario: DDoS Attack Detected
+### Workflow Phases
 
 ```mermaid
 graph LR
-    A[Suspicious Traffic] -->|High Packet Rate| B[Feature Extraction]
-    B -->|Duration: 0.001s<br/>Src_Bytes: 50000| C[ML Model]
-    C -->|Confidence: 97.3%| D[Classification: DDoS]
-    D --> E[🚨 Alert Triggered]
-    E --> F[Log Entry Created]
-    F --> G[Dashboard Updated]
+    A[📥 Phase 1<br/>Data Input]:::phase1
+    B[⚙️ Phase 2<br/>Processing]:::phase2
+    C[🧠 Phase 3<br/>Training]:::phase3
+    D[🎯 Phase 4<br/>Detection]:::phase4
+    E[📊 Phase 5<br/>Visualization]:::phase5
     
-    style A fill:#fff3cd
-    style D fill:#f8d7da
-    style E fill:#dc3545,color:#fff
-    style G fill:#d1ecf1
+    A --> B --> C --> D --> E
+    
+    classDef phase1 fill:#FF6B9D,stroke:#FF1493,stroke-width:4px,color:#FFF
+    classDef phase2 fill:#FFD93D,stroke:#FFA500,stroke-width:4px,color:#FFF
+    classDef phase3 fill:#00D9FF,stroke:#0080FF,stroke-width:4px,color:#FFF
+    classDef phase4 fill:#C77DFF,stroke:#9D4EDD,stroke-width:4px,color:#FFF
+    classDef phase5 fill:#00F5A0,stroke:#00C853,stroke-width:4px,color:#FFF
 ```
 
-### Dashboard Components Explained
+---
 
-#### 1. **Traffic Statistics Panel**
+## ✨ Key Features
 
-| Metric | Description | Visual Indicator |
-|--------|-------------|------------------|
-| Total Packets | Cumulative count | Blue badge |
-| Benign Traffic | Normal connections | Green counter |
-| Malicious Traffic | Detected attacks | Red counter |
-| Detection Rate | % of attacks caught | Progress bar |
+<div align="center">
 
-#### 2. **Prediction Display**
+| Feature | Description | Performance |
+|:-------:|:-----------:|:-----------:|
+| 🎯 | **High Accuracy** | 98%+ Detection |
+| ⚡ | **Real-Time** | <10ms Latency |
+| 🧠 | **AI-Powered** | Random Forest ML |
+| 📊 | **Interactive** | Streamlit Dashboard |
+| 🚨 | **Instant Alerts** | Visual Notifications |
 
-Each prediction shows:
-```
-╔═══════════════════════════════════════╗
-║ Packet #4523                          ║
-║ Timestamp: 2025-01-20 14:32:45       ║
-║ Classification: MALICIOUS             ║
-║ Attack Type: Brute Force              ║
-║ Confidence: 96.8%                     ║
-║ Source IP: 192.168.1.45               ║
-║ Status: 🚨 ALERT TRIGGERED            ║
-╚═══════════════════════════════════════╝
-```
+</div>
 
-#### 3. **Visualization Charts**
 
-**A. Traffic Distribution (Pie Chart)**
-- Green slice: Benign traffic
-- Red slice: Malicious traffic
-- Percentages displayed
 
-**B. Attack Type Breakdown (Bar Chart)**
-- DDoS attacks count
-- Brute Force attempts
-- Malware detections
-- Other anomalies
+---
 
-**C. Confidence Score Distribution (Histogram)**
-- X-axis: Confidence level (0-100%)
-- Y-axis: Frequency
-- Shows model certainty
+## 💻 Technology Stack
 
-#### 4. **Alert Log Table**
+<div align="center">
 
-| Timestamp | Packet ID | Type | Confidence | Action |
-|-----------|-----------|------|------------|--------|
-| 14:32:45 | #4523 | Brute Force | 96.8% | 🚨 Logged |
-| 14:31:12 | #4501 | DDoS | 99.2% | 🚨 Logged |
-| 14:29:38 | #4487 | Malware | 94.5% | 🚨 Logged |
-
-### Performance Metrics
-
-#### Model Accuracy Results
-
-```
-Classification Report:
-              precision    recall  f1-score   support
-
-      BENIGN       0.99      0.98      0.98      8470
-      ATTACK       0.96      0.98      0.97      1530
-
-    accuracy                           0.98     10000
-   macro avg       0.98      0.98      0.98     10000
-weighted avg       0.98      0.98      0.98     10000
+```mermaid
+graph TB
+    subgraph "🐍 Core"
+        A[Python 3.8+]
+    end
+    
+    subgraph "📊 Data Processing"
+        B[Pandas]
+        C[NumPy]
+    end
+    
+    subgraph "🤖 Machine Learning"
+        D[Scikit-learn]
+        E[Random Forest]
+    end
+    
+    subgraph "🎨 Visualization"
+        F[Streamlit]
+        G[Matplotlib]
+        H[Seaborn]
+    end
+    
+    A --> B & C
+    B & C --> D
+    D --> E
+    E --> F
+    F --> G & H
+    
+    classDef core fill:#FF6B9D,stroke:#FF1493,stroke-width:3px,color:#FFF
+    classDef data fill:#FFD93D,stroke:#FFA500,stroke-width:3px,color:#FFF
+    classDef ml fill:#00D9FF,stroke:#0080FF,stroke-width:3px,color:#FFF
+    classDef viz fill:#00F5A0,stroke:#00C853,stroke-width:3px,color:#FFF
+    
+    class A core
+    class B,C data
+    class D,E ml
+    class F,G,H viz
 ```
 
-#### Confusion Matrix
-
-```
-                 Predicted
-                 BENIGN  ATTACK
-Actual  BENIGN    8301    169
-        ATTACK      31   1499
-```
-
-**Interpretation:**
-- **True Negatives (8301)**: Correctly identified benign traffic
-- **True Positives (1499)**: Correctly identified attacks
-- **False Positives (169)**: Benign traffic misclassified as attack
-- **False Negatives (31)**: Attacks missed (2% miss rate)
-
-### Real-World Impact
-
-#### Before AI-NIDS
-```
-Manual monitoring → Delayed detection → Successful breach
-```
-
-#### After AI-NIDS
-```
-Automated analysis → Real-time alert → Immediate response
-```
-
-**Key Improvements:**
-- ⏱️ Detection time: Hours → Milliseconds
-- 🎯 Accuracy: 75% → 98%
-- 💰 Cost: $50,000/year → $0 (open-source)
-- 👥 Staff needed: 3-5 analysts → 0
+</div>
 
 ---
 
 ## 🎬 Live Demo
 
-### See the System in Action
+### Attack Detection in Action
+
+```mermaid
+sequenceDiagram
+    participant U as 👤 User
+    participant D as 📊 Dashboard
+    participant M as 🧠 ML Model
+    participant A as 🚨 Alert System
+    
+    rect rgb(255, 107, 157)
+    U->>D: Start Simulation
+    end
+    
+    activate D
+    rect rgb(255, 217, 61)
+    D->>M: Send Traffic Data
+    end
+    activate M
+    
+    alt Benign Traffic
+        rect rgb(0, 245, 160)
+        M-->>D: ✅ Normal
+        D-->>U: Green Status
+        end
+    else Malicious Traffic
+        rect rgb(255, 87, 87)
+        M-->>A: 🚨 THREAT!
+        end
+        activate A
+        rect rgb(199, 125, 255)
+        A-->>D: Trigger Alert
+        A-->>U: 🔴 Warning
+        end
+        deactivate A
+    end
+    
+    deactivate M
+    deactivate D
+    
+    Note over U,A: Real-time processing <10ms
+```
+
+### Dashboard Interface
 
 <div align="center">
 
-| **Dashboard Overview** | **Attack Detection** |
-|:----------------------:|:--------------------:|
-| ![Dashboard](https://github.com/user-attachments/assets/fdb77d1a-1c29-45db-8cc1-b81be884f09f) | ![Detection](https://github.com/user-attachments/assets/53c96955-24e8-4964-9d82-e03bce157adb) |
-| Real-time monitoring with traffic analytics | Live DDoS detection with instant alerts |
+| Component | Purpose | Visual |
+|:---------:|:-------:|:------:|
+| 📊 **Stats Panel** | Traffic metrics | Live counters |
+| 🥧 **Pie Chart** | Distribution | Color-coded |
+| 📈 **Bar Graph** | Attack types | Real-time |
+| 📝 **Alert Log** | Incident history | Timestamped |
 
 </div>
 
-**What You'll Experience:**
-- 🔴 **Instant Alerts**: Red warning banner when DDoS/Malware/Brute Force detected
-- 📊 **Visual Analytics**: Color-coded traffic distribution charts
-- ⚡ **Real-Time Updates**: Live packet classification table
-- 📈 **Performance Metrics**: 100% precision/recall on training data
-- 🎯 **Threat Intelligence**: Detailed attack type identification
-
 ---
 
-## 📸 Screenshots
+## 📊 Performance Metrics
 
-### Network Security Dashboard
-![Network Security Dashboard](https://github.com/user-attachments/assets/fdb77d1a-1c29-45db-8cc1-b81be884f09f)
+### Detection Accuracy
 
-*Main dashboard showing system status, model accuracy, threat level, and traffic distribution chart with historical samples analysis*
-
----
-
-### Model Training Module
-![Model Training Interface](https://github.com/user-attachments/assets/260a3fb9-cde8-4014-b1c5-95f9ffe8f931)
-
-*Training interface displaying dataset preview, simulated data generation options, and comprehensive performance metrics showing 100% accuracy with precision, recall, and F1-score breakdown for each attack type*
-
----
-
-### Live Network Traffic Simulation
-![Live Traffic Simulation](https://github.com/user-attachments/assets/53c96955-24e8-4964-9d82-e03bce157adb)
-
-*Real-time traffic simulation actively detecting DDoS, Malware, and Brute Force attacks with timestamp, duration, bytes, and prediction columns. Alert system shows "DDoS detected!" warning at the top*
-
----
-
-### Key Features Demonstrated in Screenshots
-
-✅ **Dashboard Analytics**: System status (Active), Model accuracy (91.00%), Threat level (Low)  
-✅ **Traffic Classification**: Distribution chart showing Malware, DDoS, Normal, and Brute Force traffic  
-✅ **Real-Time Detection**: Live packet analysis with instant threat identification  
-✅ **Alert System**: Visual warnings for detected attacks (DDoS, Malware, Brute Force)  
-✅ **Training Metrics**: Perfect 1.00 precision/recall/f1-score across all attack categories  
-✅ **Dataset Management**: Preview of training data with Duration, Src_Bytes, Dst_Bytes, Conn_Count columns
-
----
-
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'pie1':'#FF6B9D', 'pie2':'#FFD93D', 'pie3':'#00D9FF', 'pie4':'#00F5A0', 'pie5':'#C77DFF'}}}%%
+pie title Attack Detection Rates
+    "DDoS: 99.1%" : 99.1
+    "Brute Force: 97.8%" : 97.8
+    "Malware: 96.5%" : 96.5
+    "Other: 94.2%" : 94.2
+```
 ## 📈 Performance Metrics
 
 ### Benchmark Results
@@ -839,79 +407,6 @@ Brute Force Detection:    97.8% ████████████████
 Malware Detection:        96.5% ██████████████████
 Zero-Day Anomalies:       94.2% █████████████████
 ```
-
----
-
-## 🔮 Future Scope
-
-### Planned Enhancements
-
-#### 🎯 Short-Term Goals (Next 6 Months)
-
-1. **Deep Learning Integration**
-   - Implement LSTM networks for sequential pattern analysis
-   - CNN for packet payload inspection
-   - Hybrid ensemble models
-
-2. **Live Packet Capture**
-   - Integration with **Scapy** library
-   - Real-time network interface monitoring
-   - PCAP file import/export
-
-3. **Multi-Class Attack Detection**
-   - Expand from binary to 15+ attack categories
-   - DoS, Port Scan, SQL Injection, XSS, etc.
-   - Fine-grained threat classification
-
-#### 🚀 Long-Term Vision (1-2 Years)
-
-4. **Cloud Deployment**
-   - AWS/Azure integration
-   - Dockerized microservices
-   - Kubernetes orchestration
-   - Auto-scaling capabilities
-
-5. **Advanced Analytics**
-   - Geo-location tracking of threats
-   - Threat intelligence feeds integration
-   - Predictive attack forecasting
-   - Historical trend analysis
-
-6. **Enhanced Visualization**
-   - 3D network topology maps
-   - Interactive attack timelines
-   - Real-time heat maps
-   - Custom report generation
-
-7. **Automated Response**
-   - Auto-blocking malicious IPs
-   - Integration with firewalls (iptables)
-   - Incident response playbooks
-   - Email/SMS alert notifications
-
-8. **Mobile Application**
-   - iOS/Android companion app
-   - Push notifications
-   - Remote monitoring
-   - Quick action controls
-
-9. **Explainable AI (XAI)**
-   - Feature importance visualization
-   - Decision tree interpretation
-   - SHAP value analysis
-   - Model transparency reports
-
-10. **Federated Learning**
-    - Privacy-preserving collaborative training
-    - Multi-organization threat sharing
-    - Decentralized model updates
-
-### Research Directions
-
-- **Adversarial ML**: Robustness against adversarial attacks
-- **Transfer Learning**: Pre-trained models for specific industries
-- **Edge Computing**: On-device inference for IoT networks
-- **Quantum-Resistant Encryption**: Future-proof security
 
 ---
 
@@ -970,27 +465,8 @@ We welcome contributions from the community! Here's how you can help:
 
 ---
 
-## 👨‍💻 Author
-
-<div align="center">
-
-### Subhajit Roy
-
-[![GitHub](https://img.shields.io/badge/GitHub-sr--857-black?style=for-the-badge&logo=github)](https://github.com/sr-857)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/subhajit-roy)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:subhajitroy@example.com)
-
-**Cybersecurity Researcher | Machine Learning Enthusiast | Open Source Contributor**
-
-</div>
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ```
+
 MIT License
 
 Copyright (c) 2025 Subhajit Roy
@@ -1002,29 +478,15 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software...
 ```
 
----
+MIT License © 2025 Subhajit Roy
 
-## 🙏 Acknowledgments
 
-- **CIC-IDS2017 Dataset**: Canadian Institute for Cybersecurity
-- **Scikit-Learn Community**: For excellent ML tools
-- **Streamlit Team**: For the amazing dashboard framework
-- **Open Source Community**: For continuous inspiration
-
----
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. **Check Documentation**: Read this README thoroughly
-2. **Search Issues**: Look for similar problems in [Issues](https://github.com/sr-857/AI-Network-Intrusion-Detection/issues)
-3. **Open New Issue**: Provide detailed description, error logs, and system info
-4. **Contact Author**: Email for academic or collaboration inquiries
 
 ---
 
 ## 📊 Project Statistics
+
+<div align="center">
 
 ![GitHub stars](https://img.shields.io/github/stars/sr-857/AI-Network-Intrusion-Detection?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/sr-857/AI-Network-Intrusion-Detection?style=social)
@@ -1052,7 +514,3 @@ If you encounter any issues or have questions:
 [⬆ Back to Top](#-ai-based-network-intrusion-detection-system-nids)
 
 ---
-
-*Last Updated: January 2026*
-
-</div>
