@@ -10,9 +10,7 @@
 
 ### *Intelligent Threat Detection Through Machine Learning*
 
-**Protecting Digital Infrastructure with Real-Time AI-Powered Network Security**
-
-[Features](#-key-features) • [Architecture](#-system-architecture) • [Installation](#-installation--setup) • [Demo](#-results--demonstration) • [Documentation](#-documentation)
+[Features](#-key-features) • [Architecture](#-system-architecture) • [Usage](#-usage-guide) • [Demo](#-results--demonstration)
 
 ---
 </div>
@@ -188,169 +186,110 @@ This solution is specifically designed for:
 
 ```mermaid
 graph TB
+    %% Definitions
+    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef process fill:#fff3e0,stroke:#e65100,stroke-width:2px;
+    classDef ai fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
+    classDef ui fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef db fill:#fce4ec,stroke:#880e4f,stroke-width:2px;
+
     subgraph Input["🌐 Data Input Layer"]
-        A[Network Traffic]
-        B[Simulation Engine]
+        A[Network Traffic]:::input
+        B[Simulation Engine]:::input
     end
     
     subgraph Processing["⚙️ Processing Layer"]
-        C[Packet Capture]
-        D[Data Preprocessing]
-        E[Feature Extraction]
+        C[Packet Capture]:::process
+        D[Data Preprocessing]:::process
+        E[Feature Extraction]:::process
     end
     
     subgraph Intelligence["🧠 Intelligence Layer"]
-        F[Random Forest Model]
-        G[Training Pipeline]
-        H[Prediction Engine]
+        F[Random Forest Model]:::ai
+        G[Training Pipeline]:::ai
+        H[Real-time Prediction]:::ai
     end
     
     subgraph Presentation["📊 Presentation Layer"]
-        I[Streamlit Dashboard]
-        J[Visualization Engine]
-        K[Alert System]
+        I[Streamlit Dashboard]:::ui
+        J[Visualization Engine]:::ui
+        K[Alert System]:::ui
     end
     
     subgraph Storage["💾 Data Layer"]
-        L[(Training Data)]
-        M[(Model Artifacts)]
-        N[(Logs Database)]
+        L[(Training Data)]:::db
+        M[(Model Artifacts)]:::db
+        N[(Logs Database)]:::db
     end
     
-    A --> C
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    E --> G
+    %% Flows
+    A & B --> C
+    C --> D --> E
+    E --> F & G
     G --> M
     M --> H
     F --> H
     H --> I
-    I --> J
-    I --> K
+    I --> J & K
     L --> G
-    H --> N
-    K --> N
+    H & K --> N
     
-    style Input fill:#e3f2fd
-    style Processing fill:#fff3e0
-    style Intelligence fill:#f3e5f5
-    style Presentation fill:#e8f5e9
-    style Storage fill:#fce4ec
+    %% Links Styling
+    linkStyle default stroke-width:2px,fill:none,stroke:#555;
 ```
 
 ### Component Breakdown
 
-#### 🔵 Data Input Layer
-- **Network Traffic Source**: Real-world packet capture interface
-- **Simulation Engine**: High-fidelity traffic generator for testing and training
+*   **🔵 Data Input**: Traps network packets or generates high-fidelity simulations.
+*   **🟡 Processing**: Cleans data and extracts 41 key features (e.g., duration, byte correlation).
+*   **🟣 Intelligence**: A **Random Forest Classifier** (100 trees) predicts traffic nature in <10ms.
+*   **🟢 Presentation**: **Streamlit** dashboard provides real-time visualization and alerts.
 
-#### 🟡 Processing Layer
-- **Packet Capture**: Extracts raw network packets
-- **Data Preprocessing**: Cleans, normalizes, and formats data
-- **Feature Extraction**: Derives meaningful metrics (Duration, Bytes, Flags, etc.)
-
-#### 🟣 Intelligence Layer
-- **Random Forest Model**: Core ML algorithm (ensemble of 100 decision trees)
-- **Training Pipeline**: Automated model training with cross-validation
-- **Prediction Engine**: Real-time classification with <10ms latency
-
-#### 🟢 Presentation Layer
-- **Streamlit Dashboard**: Interactive web interface
-- **Visualization Engine**: Real-time graphs and statistics
-- **Alert System**: Threat notification and logging
-
-#### 🔴 Data Layer
-- **Training Data**: CIC-IDS2017 format dataset storage
-- **Model Artifacts**: Serialized trained models
-- **Logs Database**: Event history and audit trail
 
 ---
 
 ### Detailed Architecture Flow
 
+### System Workflow
+
 ```mermaid
 sequenceDiagram
+    autonumber
     participant Net as Network
-    participant Cap as Capture Module
-    participant Pre as Preprocessor
     participant Feat as Feature Engine
-    participant ML as ML Model
-    participant Dash as Dashboard
-    participant Alert as Alert System
+    participant ML as 🧠 AI Model
+    participant Dash as 🛡️ Dashboard
+    participant Alert as 🚨 Alert System
     
-    Net->>Cap: Network Packets
-    Cap->>Pre: Raw Data
-    Pre->>Pre: Clean & Normalize
-    Pre->>Feat: Structured Data
+    Note over Net, Feat: Data Ingestion
+    Net->>Feat: Raw Packets
     Feat->>Feat: Extract 41 Features
     Feat->>ML: Feature Vector
+    
+    Note over ML, Alert: Intelligence
     ML->>ML: Random Forest Inference
     
     alt Benign Traffic
-        ML->>Dash: Classification: BENIGN
-        Dash->>Dash: Update Normal Stats
+        ML-->>Dash: Status: OK ✅
     else Malicious Traffic
-        ML->>Alert: Classification: ATTACK
+        ML-->>Alert: Status: THREAT ❌
+        Alert->>Dash: Trigger Red Alert!
         Alert->>Alert: Log Incident
-        Alert->>Dash: Trigger Alert UI
     end
     
-    Dash->>Net: Display Results
+    Dash->>Net: Live Status Update
 ```
 
 ---
 
 ## ✨ Key Features
 
-### 🎯 Core Capabilities
+*   **Real-Time Simulation**: High-fidelity packet generation for DDoS, Brute Force, and Malware.
+*   **High Accuracy**: **98%+** detection rate using Random Forest on CIC-IDS2017 dataset.
+*   **Interactive Dashboard**: Live metrics, attack logs, and confidence scoring via **Streamlit**.
+*   **Modular Design**: extensible Python architecture with standard ML libraries.
+*   **Alert System**: Instant visual notifications for detected threats.
 
-#### 1. **Real-Time Traffic Simulation**
-- High-fidelity packet generation
-- Supports multiple attack scenarios (DDoS, Brute Force, Malware)
-- Configurable traffic parameters
-- CIC-IDS2017 dataset format compatibility
-
-#### 2. **Machine Learning Classification**
-- **Algorithm**: Random Forest Classifier
-- **Accuracy**: 98%+ on test datasets
-- **Features**: 41 network traffic metrics
-- **Training**: 80/20 train-test split with cross-validation
-
-#### 3. **Interactive Dashboard**
-- Built with Streamlit for seamless UX
-- Tabs: Training, Simulation, Project Info
-- Real-time prediction display
-- Session-wise attack logging
-
-#### 4. **On-Demand Model Training**
-- Upload custom datasets
-- Automatic preprocessing pipeline
-- Hyperparameter optimization
-- Model performance metrics
-
-#### 5. **Comprehensive Visualization**
-```
-📊 Traffic Distribution Charts
-📈 Attack Type Breakdown
-🎯 Confidence Score Graphs
-⏱️ Real-Time Timeline View
-```
-
-#### 6. **Alert Management System**
-- Color-coded threat levels
-- Session-based incident tracking
-- Exportable alert logs
-- Dashboard notifications
-
-### 🔧 Additional Features
-
-- ✅ Lightweight and fast (Python-based)
-- ✅ Modular architecture for easy extension
-- ✅ No external dependencies on proprietary tools
-- ✅ Educational mode with explanatory tooltips
-- ✅ Scalable to handle high-velocity traffic
 
 ---
 
